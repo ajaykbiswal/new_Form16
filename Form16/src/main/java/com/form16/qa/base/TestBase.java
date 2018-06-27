@@ -17,19 +17,33 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.ITestResult;
 //import org.openqa.selenium.support.ui.ExpectedConditions;
 //import org.openqa.selenium.support.ui.WebDriverWait;
 //import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.MediaEntityModelProvider;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.Markup;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.ChartLocation;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.form16.qa.utility.TestUtil;
 import com.form16.qa.utility.WebEventListeners;
 import com.form16.qa.utility.Xl;
 //import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+//import com.relevantcodes.extentreports.ExtentTest;
+//import com.relevantcodes.extentreports.LogStatus;
 
 
 public class TestBase {
@@ -39,7 +53,10 @@ public class TestBase {
  	public static EventFiringWebDriver fireEventdriver;
  	public static WebEventListeners eventlisteners;
  	public static Logger log=Logger.getLogger(TestBase.class.getName());
- 	public static ExtentTest test;
+ 	public static ExtentHtmlReporter htmlReporter;
+	public static ExtentReports extent;
+	public static ExtentTest logger;
+
  	
  	
  
@@ -47,8 +64,9 @@ public class TestBase {
  		 
  		try { 
  			pro=new Properties(); 
-			FileInputStream ofile=new FileInputStream("C:\\HRaas-Payroll_Automation\\Form16\\src\\main\\java\\com\\form16\\qa\\config\\config.properties");
-		
+			//FileInputStream ofile=new FileInputStream("C:\\HRaas-Payroll_Automation\\Form16\\src\\main\\java\\com\\form16\\qa\\config\\config.properties");
+			FileInputStream ofile=new FileInputStream("..\\Form16\\src\\main\\java\\com\\form16\\qa\\config\\config.properties");
+
  			pro.load(ofile); 
  		} catch (FileNotFoundException e) { 
  			 e.getMessage(); 
@@ -83,6 +101,10 @@ public class TestBase {
 		eventlisteners=new WebEventListeners();
 		fireEventdriver.register(eventlisteners);
 		driver=fireEventdriver;
+		
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/test-output/ExtentReport.html");
+		extent = new ExtentReports ();
+		extent.attachReporter(htmlReporter);
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -122,5 +144,48 @@ public class TestBase {
 //	Xl.generateReport("excel-report.xlsx");
 //		
 //	}
+	
+//	@BeforeSuite
+//	public void startReport(){
+//		
+//		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/test-output/ExtentReport.html");
+//		extent = new ExtentReports ();
+//		extent.attachReporter(htmlReporter);
+//		extent.setSystemInfo("Host Name", "SoftwareTestingMaterial");
+//		extent.setSystemInfo("Environment", "Automation Testing");
+//		extent.setSystemInfo("User Name", "Ajay Biswal");
+//		
+//		htmlReporter.config().setDocumentTitle("Title of the Report Comes here");
+//		htmlReporter.config().setReportName("Name of the Report Comes here");
+//		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
+//		htmlReporter.config().setTheme(Theme.STANDARD);
+//	}
+   @AfterMethod
+	public void getResult(ITestResult result) throws IOException{
+		
+      if(result.getStatus()==ITestResult.FAILURE){
+    	  logger.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+ " - Test Case Failed", ExtentColor.RED));
+    	  logger.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
+    	  String screenshotName=TestUtil.takeScreenshotAtEndOfTest(driver, result.getName());
+    	  logger.fail("Snapshot of Test Case Failed").addScreenCaptureFromPath(screenshotName);
+    	  logger.fail("Test Case Failed", MediaEntityBuilder.createScreenCaptureFromPath("screenshot.png").build());
+      }
+      else if(result.getStatus() == ITestResult.SUCCESS){
+    	  logger.log(Status.PASS, MarkupHelper.createLabel(result.getName()+ " - Test Case Passed", ExtentColor.GREEN));
+      }
+ 
+      else if(result.getStatus() == ITestResult.SKIP){
+    	  logger.log(Status.SKIP, MarkupHelper.createLabel(result.getName()+ " - Test Case Skiped", ExtentColor.YELLOW));
+    	  logger.log(Status.SKIP, MarkupHelper.createLabel(result.getThrowable() + " - Test Case Skiped", ExtentColor.YELLOW));
+      }
+		
+	}
+	
+	@AfterSuite
+	public void endReport(){
+		extent.flush();
+		
+	}
+	
 	
 }

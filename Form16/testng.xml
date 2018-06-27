@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="false">
-      		<listeners>
+      		<!--   <listeners>
       					<listener class-name="com.form16.qa.utility.ExtentReportListener"/>
-   			</listeners>
+   			</listeners>-->
    
   	<test  name="LoginPageTest" parallel="false" preserve-order="true"  verbose="2">
     		<classes>

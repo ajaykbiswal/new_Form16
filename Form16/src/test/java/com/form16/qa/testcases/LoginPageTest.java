@@ -4,6 +4,8 @@ import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+
 import com.form16.qa.base.TestBase;
 import com.form16.qa.pages.HomePage;
 import com.form16.qa.pages.LoginPage;
@@ -14,6 +16,7 @@ public class LoginPageTest extends TestBase {
 	public static Logger log=Logger.getLogger(LoginPageTest.class.getName());
 	LoginPage loginpage;
 	HomePage homepage;
+
 	
 	public LoginPageTest(){
 		super();
@@ -28,6 +31,7 @@ public class LoginPageTest extends TestBase {
 	@Test 
 	public void loginPageTitleTest(){
 		log.info(" Starting loginPageTitleTest ");
+		logger=extent.createTest("loginPageTitleTest");
 		String title=loginpage.verifyLoginPageTitle();
 		Assert.assertEquals(title, "HR Services");
 		log.info("Title verified successfully and the value  is: "+ title);
@@ -38,6 +42,7 @@ public class LoginPageTest extends TestBase {
 	public void hrServicelogoTest(){
 		log.info(" Starting hrServicelogoTest ");
 		boolean flag=loginpage.verifyHRservicelogo();
+		logger=extent.createTest("hrServicelogoTest");
 		Assert.assertTrue(flag);
 		log.info("Logo validated successfully and  the value is :-"+ flag);
 		log.info(" Ending hrServicelogoTest ");
@@ -46,6 +51,7 @@ public class LoginPageTest extends TestBase {
     @Test 
 	public void loginTest() {
     	log.info(" Starting loginTest ");
+    	logger=extent.createTest(" loginTest");
      	log.info("Entered UserName :"+pro.getProperty("userName"));
     	log.info("Entered Password :"+pro.getProperty("password"));
 		homepage=loginpage.login(pro.getProperty("userName"), pro.getProperty("password"));

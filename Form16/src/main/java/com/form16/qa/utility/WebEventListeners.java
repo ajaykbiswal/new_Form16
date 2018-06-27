@@ -9,13 +9,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 import com.form16.qa.base.TestBase;
-import com.relevantcodes.extentreports.ExtentTest;
+//import com.relevantcodes.extentreports.ExtentTest;
 
 
 public class WebEventListeners  extends TestBase implements WebDriverEventListener{
 
 
-	public static ExtentTest logger;
+//	public static ExtentTest logger;
 
 	
 	public void beforeNavigateTo (String url, WebDriver driver) {

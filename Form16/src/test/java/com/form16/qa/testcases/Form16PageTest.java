@@ -41,6 +41,7 @@ public class Form16PageTest extends TestBase {
 	@Test 
 	public void form16TabTest(){
 				log.info(" Starting clickOnForm16Test ");
+				  logger=extent.createTest("form16TabTest");
 				boolean flag=form16page.verifyForm16TabDisplay();
 //				Assert.assertTrue(flag);
 				Assert.assertTrue(flag, "Verification failed:  The FormTab is not displayed correctly on the webpage");
@@ -54,6 +55,7 @@ public class Form16PageTest extends TestBase {
 	@Test
 	public void policyButtonTest(){
 		log.info("Starting policyButtonTest");
+		  logger=extent.createTest("policyButtonTest");
 		boolean flag=form16page.verifyPolicyButton();
 		//Assert.assertTrue(flag);
 		Assert.assertTrue(flag, "Verification failed:  The policy button  is not displayed correctly on the webpage ");
@@ -70,6 +72,7 @@ public class Form16PageTest extends TestBase {
 	@Test
 	public void leftSpinnerTest(){
 			log.info(" Starting leftSpinnerTest ");
+			 logger=extent.createTest("leftSpinnerTest");
 			form16page.verifyLeftSpinner();
 			log.info("Clicked on left spinner sucessfully");
 			log.info(" Ending leftSpinnerTest ");
@@ -78,6 +81,7 @@ public class Form16PageTest extends TestBase {
 	@Test
 	public void rightSpinnerTest(){
 		log.info("Starting rightSpinnerTest");
+		 logger=extent.createTest("rightSpinnerTest");
 		form16page.verifyRightSpinner();
 		log.info("Clicked on right spinner sucessfully");
 		log.info(" Ending rightSpinnerTest ");
@@ -85,6 +89,7 @@ public class Form16PageTest extends TestBase {
 	@Test 
 	public void instrcutionTabTest(){
 				log.info(" Starting instrcutionTabTest ");
+				 logger=extent.createTest("instrcutionTabTest");
 				boolean flag=form16page.verifyInstructionTabDisplay();
 				//Assert.assertTrue(flag);
 				Assert.assertTrue(flag, "Verification failed:  The InstructionTab is not displayed correctly on the webpage");
@@ -97,6 +102,7 @@ public class Form16PageTest extends TestBase {
 	@Test 
 	public void pdfDownloadTest(){
 				log.info(" Starting pdfDownload & pdfFileValidationTest ");
+				 logger=extent.createTest("pdfDownloadTest");
 				form16page.verifyPdfDownload();
 				log.info("Clicked on form16 download successfully");
 				String pdfdata=TestUtil.verifyPdfFile();
@@ -111,6 +117,7 @@ public class Form16PageTest extends TestBase {
 	 public void instructiontabTextTest(){
 		  
 		 log.info("Starting instructiontabTextTest");
+		 logger=extent.createTest(" instructiontabTextTest");
 		 form16page.clickonInstructionTab();
 		 log.info("Clicked on instruction tab sucessfully");
 		 //Assert.assertTrue( form16page.verifyinstructionTabText().contains("validate signature1"));

@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.form16.qa.utility.ExtentReportListener"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="LoginPageTest(failed)">
+    <classes>
+      <class name="com.form16.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="loginTest"/>
+          <include name="getResult"/>
+          <include name="setUP"/>
+          <include name="hrServicelogoTest"/>
+          <include name="loginPageTitleTest"/>
+          <include name="endReport"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.form16.qa.testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- LoginPageTest(failed) -->
+  <test thread-count="5" name="Form16PageTest(failed)">
     <classes>
       <class name="com.form16.qa.testcases.Form16PageTest">
         <methods>
           <include name="setUP"/>
+          <include name="getResult"/>
           <include name="pdfDownloadTest"/>
+          <include name="endReport"/>
           <include name="teardown"/>
+          <include name="instructiontabTextTest"/>
         </methods>
       </class> <!-- com.form16.qa.testcases.Form16PageTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Form16PageTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

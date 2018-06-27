@@ -563,3 +563,50 @@
 2018-06-26 14:58:33,015 [main] INFO com.form16.qa.testcases.Form16PageTest - Instructiontab text verified  successfully
 2018-06-26 14:58:33,015 [main] INFO com.form16.qa.testcases.Form16PageTest - Ending instructiontabTextTest
 2018-06-26 14:58:37,917 [main] INFO com.form16.qa.base.TestBase -  Browser is closed 
+2018-06-27 23:20:05,618 [main] INFO com.form16.qa.base.TestBase -  Browser is initialized 
+2018-06-27 23:20:09,061 [main] INFO com.form16.qa.base.TestBase - Creating object of :chrome
+2018-06-27 23:20:11,447 [main] INFO com.form16.qa.base.TestBase - Navigating to : http://webpages.centralindia.cloudapp.azure.com/
+2018-06-27 23:20:36,650 [main] INFO com.form16.qa.base.TestBase -  Browser is closed 
+2018-06-27 23:20:36,700 [main] INFO com.form16.qa.base.TestBase -  Browser is initialized 
+2018-06-27 23:20:39,265 [main] INFO com.form16.qa.base.TestBase - Creating object of :chrome
+2018-06-27 23:20:40,855 [main] INFO com.form16.qa.base.TestBase - Navigating to : http://webpages.centralindia.cloudapp.azure.com/
+2018-06-27 23:21:00,659 [main] INFO com.form16.qa.testcases.HomePageTest -  Starting homeLabelTest 
+2018-06-27 23:21:00,991 [main] INFO com.form16.qa.testcases.HomePageTest - Navigated to Home page successfully & the value is : true
+2018-06-27 23:21:01,083 [main] INFO com.form16.qa.testcases.HomePageTest -  Service page label validated successfully & the value is : true
+2018-06-27 23:21:01,083 [main] INFO com.form16.qa.testcases.HomePageTest -  Ending homeLabelTest 
+2018-06-27 23:21:01,103 [main] INFO com.form16.qa.testcases.HomePageTest -  Starting clickOnServiceTest 
+2018-06-27 23:21:04,280 [main] INFO com.form16.qa.testcases.HomePageTest - Clicked on Service page successfully
+2018-06-27 23:21:04,284 [main] INFO com.form16.qa.testcases.HomePageTest -  Ending clickOnServiceTest 
+2018-06-27 23:21:04,288 [main] INFO com.form16.qa.testcases.HomePageTest -  Starting form16linkTitleTest 
+2018-06-27 23:21:06,991 [main] INFO com.form16.qa.testcases.HomePageTest - Form16 title verified successfully & the value is : true
+2018-06-27 23:21:06,995 [main] INFO com.form16.qa.testcases.HomePageTest -  Ending form16linkTitleTest 
+2018-06-27 23:21:06,999 [main] INFO com.form16.qa.testcases.HomePageTest -  Starting clickOnForm16Test 
+2018-06-27 23:21:13,249 [main] INFO com.form16.qa.testcases.HomePageTest - Clicked on Form16 successfully
+2018-06-27 23:21:13,252 [main] INFO com.form16.qa.testcases.HomePageTest -  Ending clickOnForm16Test 
+2018-06-27 23:21:18,477 [main] INFO com.form16.qa.base.TestBase -  Browser is closed 
+2018-06-27 23:21:18,496 [main] INFO com.form16.qa.base.TestBase -  Browser is initialized 
+2018-06-27 23:21:20,924 [main] INFO com.form16.qa.base.TestBase - Creating object of :chrome
+2018-06-27 23:21:23,109 [main] INFO com.form16.qa.base.TestBase - Navigating to : http://webpages.centralindia.cloudapp.azure.com/
+2018-06-27 23:21:51,605 [main] INFO com.form16.qa.testcases.Form16PageTest -  Starting clickOnForm16Test 
+2018-06-27 23:21:51,677 [main] INFO com.form16.qa.testcases.Form16PageTest - Form16 tab verified successfully & the value is : true
+2018-06-27 23:21:51,677 [main] INFO com.form16.qa.testcases.Form16PageTest -  Ending clickOnForm16Test 
+2018-06-27 23:21:51,677 [main] INFO com.form16.qa.testcases.Form16PageTest - Starting policyButtonTest
+2018-06-27 23:21:51,741 [main] INFO com.form16.qa.testcases.Form16PageTest - policy button verified successfully & the value is : true
+2018-06-27 23:21:51,906 [main] INFO com.form16.qa.testcases.Form16PageTest - Clicked on policy button sucessfully
+2018-06-27 23:21:51,986 [main] INFO com.form16.qa.testcases.Form16PageTest - PolicySnippet text verified  successfully
+2018-06-27 23:21:52,114 [main] INFO com.form16.qa.testcases.Form16PageTest - Clicked on policy close button sucessfully
+2018-06-27 23:21:52,114 [main] INFO com.form16.qa.testcases.Form16PageTest - Ending  policyButtonTest
+2018-06-27 23:21:52,118 [main] INFO com.form16.qa.testcases.Form16PageTest -  Starting leftSpinnerTest 
+2018-06-27 23:21:53,421 [main] INFO com.form16.qa.testcases.Form16PageTest - Clicked on left spinner sucessfully
+2018-06-27 23:21:53,421 [main] INFO com.form16.qa.testcases.Form16PageTest -  Ending leftSpinnerTest 
+2018-06-27 23:21:53,425 [main] INFO com.form16.qa.testcases.Form16PageTest - Starting rightSpinnerTest
+2018-06-27 23:21:57,587 [main] INFO com.form16.qa.testcases.Form16PageTest - Clicked on right spinner sucessfully
+2018-06-27 23:21:57,587 [main] INFO com.form16.qa.testcases.Form16PageTest -  Ending rightSpinnerTest 
+2018-06-27 23:21:57,591 [main] INFO com.form16.qa.testcases.Form16PageTest -  Starting instrcutionTabTest 
+2018-06-27 23:21:58,383 [main] INFO com.form16.qa.testcases.Form16PageTest - Instruction tab verified successfully & the value is : true
+2018-06-27 23:21:58,389 [main] INFO com.form16.qa.testcases.Form16PageTest -  Ending instrcutionTabTest 
+2018-06-27 23:21:58,393 [main] INFO com.form16.qa.testcases.Form16PageTest -  Starting pdfDownload & pdfFileValidationTest 
+2018-06-27 23:22:12,552 [main] INFO com.form16.qa.testcases.Form16PageTest - Clicked on form16 download successfully
+2018-06-27 23:22:13,852 [main] INFO com.form16.qa.testcases.Form16PageTest - Starting instructiontabTextTest
+2018-06-27 23:22:13,997 [main] INFO com.form16.qa.testcases.Form16PageTest - Clicked on instruction tab sucessfully
+2018-06-27 23:22:19,702 [main] INFO com.form16.qa.base.TestBase -  Browser is closed 
