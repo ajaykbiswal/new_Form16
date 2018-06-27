@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false">
+      		<listeners>
+      					<listener class-name="com.form16.qa.utility.ExtentReportListener"/>
+   			</listeners>
+   
+  	<test  name="LoginPageTest" parallel="false" preserve-order="true"  verbose="2">
+    		<classes>
+      				<class name="com.form16.qa.testcases.LoginPageTest"/>
+      		</classes>
+       </test> 
+        <test  name="HomePageTest" parallel="false" preserve-order="true"  verbose="2">	
+        		<classes>	
+      				<class name="com.form16.qa.testcases.HomePageTest">
+           					<methods>
+           					         <include name="homeLabelTest"/>
+                    				 <include name="clickOnServiceTest"/>
+                    				 <include name="form16linkTitleTest"/>
+                    				 <include name="clickOnForm16Test"/>       
+           					</methods>
+          		</class>
+          	</classes>
+      </test> 
+   <test  name="Form16PageTest" parallel="false" preserve-order="true"  verbose="2">	
+         <classes>	
+      			<class name="com.form16.qa.testcases.Form16PageTest">  
+      			         <methods>
+           					         <include name="form16TabTest"/>
+                    				 <include name="policyButtonTest"/>
+                    				 <include name="leftSpinnerTest"/>
+                    				 <include name="rightSpinnerTest"/>    
+                    				 <include name="instrcutionTabTest"/>
+                    				 <include name="pdfDownloadTest"/>   
+                    				 <include name="instructiontabTextTest"/>     		 
+                    				    
+           					</methods>
+          		</class>    
+    	</classes>
+  </test> 
+</suite> 

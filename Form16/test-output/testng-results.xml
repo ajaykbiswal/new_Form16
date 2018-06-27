@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1416" started-at="2018-06-26T09:29:15Z" finished-at="2018-06-26T09:29:16Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1416" started-at="2018-06-26T09:29:15Z" finished-at="2018-06-26T09:29:16Z">
+      <class name="com.form16.qa.testcases.GenerateExcelReport">
+        <test-method status="PASS" signature="Report()[pri:0, instance:com.form16.qa.testcases.GenerateExcelReport@598067a5]" name="Report" duration-ms="1394" started-at="2018-06-26T09:29:15Z" finished-at="2018-06-26T09:29:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Report -->
+      </class> <!-- com.form16.qa.testcases.GenerateExcelReport -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
