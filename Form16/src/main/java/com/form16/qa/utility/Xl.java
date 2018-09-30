@@ -121,8 +121,8 @@ import java.io.FileOutputStream;
 	    
 	    int width = 500;
 	    int height = 500;
+	    //float quality = 1.0F;
 	    float quality = 1.0F;
-	    //float quality = 5.0F;
 	    ByteArrayOutputStream chart_out = new ByteArrayOutputStream();
 	    ChartUtilities.writeChartAsJPEG(chart_out, quality, myPieChart, width, height);
 	    int my_picture_id = workbook.addPicture(chart_out.toByteArray(), 5);

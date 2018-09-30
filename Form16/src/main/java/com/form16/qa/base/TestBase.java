@@ -1,5 +1,6 @@
 package com.form16.qa.base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -41,9 +42,6 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.form16.qa.utility.TestUtil;
 import com.form16.qa.utility.WebEventListeners;
 import com.form16.qa.utility.Xl;
-//import com.relevantcodes.extentreports.ExtentReports;
-//import com.relevantcodes.extentreports.ExtentTest;
-//import com.relevantcodes.extentreports.LogStatus;
 
 
 public class TestBase {
@@ -102,10 +100,6 @@ public class TestBase {
 		fireEventdriver.register(eventlisteners);
 		driver=fireEventdriver;
 		
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/test-output/ExtentReport.html");
-		extent = new ExtentReports ();
-		extent.attachReporter(htmlReporter);
-		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.Page_Load_Timeout, TimeUnit.SECONDS);
@@ -145,30 +139,32 @@ public class TestBase {
 //		
 //	}
 	
-//	@BeforeSuite
-//	public void startReport(){
-//		
-//		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/test-output/ExtentReport.html");
-//		extent = new ExtentReports ();
-//		extent.attachReporter(htmlReporter);
-//		extent.setSystemInfo("Host Name", "SoftwareTestingMaterial");
-//		extent.setSystemInfo("Environment", "Automation Testing");
-//		extent.setSystemInfo("User Name", "Ajay Biswal");
-//		
-//		htmlReporter.config().setDocumentTitle("Title of the Report Comes here");
-//		htmlReporter.config().setReportName("Name of the Report Comes here");
-//		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
-//		htmlReporter.config().setTheme(Theme.STANDARD);
-//	}
+	@BeforeSuite
+	public void startReport(){
+		
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/test-output/ExtentReport.html");
+		extent = new ExtentReports ();
+		extent.attachReporter(htmlReporter);
+		extent.setSystemInfo("Host Name", "LT0088970");
+		extent.setSystemInfo("Environment", "QA - Automation");
+		extent.setSystemInfo("User Name", "Ajay Biswal");
+		
+		htmlReporter.config().setDocumentTitle("HRaas-Automation");
+		htmlReporter.config().setReportName("Automation Test Report");
+		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
+		htmlReporter.config().setTheme(Theme.STANDARD);
+		htmlReporter.loadXMLConfig(new File(System.getProperty("user.dir")+"\\src\\main\\resources\\extent-config.xml"));
+		
+	}
    @AfterMethod
 	public void getResult(ITestResult result) throws IOException{
 		
       if(result.getStatus()==ITestResult.FAILURE){
     	  logger.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+ " - Test Case Failed", ExtentColor.RED));
-    	  logger.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
+    	  logger.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + "", ExtentColor.RED));
     	  String screenshotName=TestUtil.takeScreenshotAtEndOfTest(driver, result.getName());
-    	  logger.fail("Snapshot of Test Case Failed").addScreenCaptureFromPath(screenshotName);
-    	  logger.fail("Test Case Failed", MediaEntityBuilder.createScreenCaptureFromPath("screenshot.png").build());
+    	  logger.fail("Screenshot of the Failed Test Case").addScreenCaptureFromPath(screenshotName);
+//    	  logger.fail("Test Case Failed", MediaEntityBuilder.createScreenCaptureFromPath("screenshot.png").build());
       }
       else if(result.getStatus() == ITestResult.SUCCESS){
     	  logger.log(Status.PASS, MarkupHelper.createLabel(result.getName()+ " - Test Case Passed", ExtentColor.GREEN));

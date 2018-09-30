@@ -62,7 +62,7 @@
 //	extent=new ExtentReports(System.getProperty("user.dir")+"/test-output/ExtentReport.html", true);
 //	extent.addSystemInfo("Selenium Version", "2.53");
 //	extent.addSystemInfo("Environment", "QA");
-//	extent.loadConfig(new File(System.getProperty("user.dir")+"src\\main\\resources\\extent-config.xml"));
+//extent.loadConfig(new File(System.getProperty("user.dir")+"src\\main\\resources\\extent-config.xml"));
 //    
 //
 //	
