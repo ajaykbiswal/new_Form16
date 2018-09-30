@@ -5,8 +5,11 @@
     <classes>
       <class name="form16.TestClassOne">
         <methods>
-          <include name="testMethodFail"/>
-          <include name="testMethodSkip"/>
+          <include name="getResult"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
+          <include name="testMethodtwo"/>
+          <include name="testMethodthird"/>
         </methods>
       </class> <!-- form16.TestClassOne -->
     </classes>
@@ -15,8 +18,11 @@
     <classes>
       <class name="form16.TestClassTwo">
         <methods>
-          <include name="testMethodFail"/>
-          <include name="testMethodSkip"/>
+          <include name="getResult"/>
+          <include name="testMethod6"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
+          <include name="testMethod5"/>
         </methods>
       </class> <!-- form16.TestClassTwo -->
     </classes>

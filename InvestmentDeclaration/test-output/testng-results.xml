@@ -1,67 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="2" failed="2" ignored="0" total="6" passed="2">
+<testng-results skipped="1" failed="1" ignored="0" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="102" started-at="2018-06-15T18:01:55Z" finished-at="2018-06-15T18:01:55Z">
+  <suite name="Default suite" duration-ms="34" started-at="2018-08-10T12:09:27Z" finished-at="2018-08-10T12:09:27Z">
     <groups>
     </groups>
-    <test name="TestOne" duration-ms="41" started-at="2018-06-15T18:01:55Z" finished-at="2018-06-15T18:01:55Z">
+    <test name="Default test" duration-ms="34" started-at="2018-08-10T12:09:27Z" finished-at="2018-08-10T12:09:27Z">
       <class name="form16.TestClassOne">
-        <test-method status="FAIL" signature="testMethodFail()[pri:0, instance:form16.TestClassOne@1a968a59]" name="testMethodFail" duration-ms="10" started-at="2018-06-15T18:01:55Z" finished-at="2018-06-15T18:01:55Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at form16.TestClassOne.testMethodFail(TestClassOne.java:19)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="startReport()[pri:0, instance:form16.TestClassOne@cb644e]" name="startReport" is-config="true" duration-ms="139" started-at="2018-08-10T12:09:27Z" finished-at="2018-08-10T12:09:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethodFail -->
-        <test-method status="PASS" signature="testMethodPass()[pri:0, instance:form16.TestClassOne@1a968a59]" name="testMethodPass" duration-ms="1" started-at="2018-06-15T18:01:55Z" finished-at="2018-06-15T18:01:55Z">
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="testMethodOne()[pri:0, instance:form16.TestClassOne@cb644e]" name="testMethodOne" duration-ms="11" started-at="2018-08-10T12:09:27Z" finished-at="2018-08-10T12:09:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethodPass -->
-        <test-method status="SKIP" signature="testMethodSkip()[pri:0, instance:form16.TestClassOne@1a968a59]" name="testMethodSkip" duration-ms="1" started-at="2018-06-15T18:01:55Z" finished-at="2018-06-15T18:01:55Z">
+        </test-method> <!-- testMethodOne -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:form16.TestClassOne@cb644e]" name="getResult" is-config="true" duration-ms="2" started-at="2018-08-10T12:09:27Z" finished-at="2018-08-10T12:09:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMethodOne status=SUCCESS method=TestClassOne.testMethodOne()[pri:0, instance:form16.TestClassOne@cb644e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="SKIP" signature="testMethodthird()[pri:0, instance:form16.TestClassOne@cb644e]" name="testMethodthird" duration-ms="1" started-at="2018-08-10T12:09:27Z" finished-at="2018-08-10T12:09:27Z">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Skipped Intentionally]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: Skipped Intentionally
-at form16.TestClassOne.testMethodSkip(TestClassOne.java:25)
+at form16.TestClassOne.testMethodthird(TestClassOne.java:50)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -92,98 +64,76 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethodSkip -->
+        </test-method> <!-- testMethodthird -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:form16.TestClassOne@cb644e]" name="getResult" is-config="true" duration-ms="1" started-at="2018-08-10T12:09:27Z" finished-at="2018-08-10T12:09:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMethodthird status=SKIP method=TestClassOne.testMethodthird()[pri:0, instance:form16.TestClassOne@cb644e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="FAIL" signature="testMethodtwo()[pri:0, instance:form16.TestClassOne@cb644e]" name="testMethodtwo" duration-ms="2" started-at="2018-08-10T12:09:27Z" finished-at="2018-08-10T12:09:27Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[TestMethodtwo failed expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: TestMethodtwo failed expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at form16.TestClassOne.testMethodtwo(TestClassOne.java:37)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodtwo -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:form16.TestClassOne@cb644e]" name="getResult" is-config="true" duration-ms="0" started-at="2018-08-10T12:09:27Z" finished-at="2018-08-10T12:09:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testMethodtwo status=FAILURE method=TestClassOne.testMethodtwo()[pri:0, instance:form16.TestClassOne@cb644e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:form16.TestClassOne@cb644e]" name="endReport" is-config="true" duration-ms="208" started-at="2018-08-10T12:09:27Z" finished-at="2018-08-10T12:09:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
       </class> <!-- form16.TestClassOne -->
-    </test> <!-- TestOne -->
-    <test name="TestTwo" duration-ms="13" started-at="2018-06-15T18:01:55Z" finished-at="2018-06-15T18:01:55Z">
-      <class name="form16.TestClassTwo">
-        <test-method status="FAIL" signature="testMethodFail()[pri:0, instance:form16.TestClassTwo@72d818d1]" name="testMethodFail" duration-ms="1" started-at="2018-06-15T18:01:55Z" finished-at="2018-06-15T18:01:55Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at form16.TestClassTwo.testMethodFail(TestClassTwo.java:19)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethodFail -->
-        <test-method status="PASS" signature="testMethodPass()[pri:0, instance:form16.TestClassTwo@72d818d1]" name="testMethodPass" duration-ms="2" started-at="2018-06-15T18:01:55Z" finished-at="2018-06-15T18:01:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethodPass -->
-        <test-method status="SKIP" signature="testMethodSkip()[pri:0, instance:form16.TestClassTwo@72d818d1]" name="testMethodSkip" duration-ms="2" started-at="2018-06-15T18:01:55Z" finished-at="2018-06-15T18:01:55Z">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Skipped Intentionally]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Skipped Intentionally
-at form16.TestClassTwo.testMethodSkip(TestClassTwo.java:25)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethodSkip -->
-      </class> <!-- form16.TestClassTwo -->
-    </test> <!-- TestTwo -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="TestOne(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="form16.TestClassOne">
         <methods>
-          <include name="testMethodFail"/>
-          <include name="testMethodSkip"/>
+          <include name="getResult"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
+          <include name="testMethodtwo"/>
+          <include name="testMethodthird"/>
         </methods>
       </class> <!-- form16.TestClassOne -->
     </classes>
-  </test> <!-- TestOne(failed) -->
-  <test thread-count="5" name="TestTwo(failed)">
-    <classes>
-      <class name="form16.TestClassTwo">
-        <methods>
-          <include name="testMethodFail"/>
-          <include name="testMethodSkip"/>
-        </methods>
-      </class> <!-- form16.TestClassTwo -->
-    </classes>
-  </test> <!-- TestTwo(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
